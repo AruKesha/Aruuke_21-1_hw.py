@@ -14,7 +14,7 @@ import re
 class ValidCarNumber:
     def is_valid(self, number):
         self.number = number
-        is_valid = re.search(r'.+01KG([0-9]{3})([A-Z]{3})', number)
+        is_valid = re.search(r'.+0[1-9]KG([0-9]{3})([A-Z]{3})', number)
         print(is_valid)
         try:
             if self.number[is_valid.start():is_valid.end()] == number:
